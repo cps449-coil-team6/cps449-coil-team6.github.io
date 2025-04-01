@@ -1,0 +1,109 @@
+body {
+    font: 20px Montserrat, sans-serif;
+    line-height: 1.8;
+    color: #a56f29;
+}
+p {font-size: 16px;}
+.margin {margin-bottom: 45px;}
+.bg-1 { 
+    background-image: url('https://w.wallhaven.cc/full/42/wallhaven-42roy9.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #f0dfcc;
+}
+.bg-2 { 
+    background-color: #a56f29;
+    color: #f0dfcc;
+}
+.bg-3 { 
+    background-color: #f0dfcc;
+    color: #a56f29;
+}
+.bg-4 { 
+    background-color: #271808;
+    color: #f0dfcc;
+}
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+.navbar-nav  li a:hover {
+    color: #a56f29 !important;
+}
+.button {
+    background-color: #a56f29;
+    border: none;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.round {border-radius: 8px;}
+#trivia {background-color: #f0dfcc;}
+#triviaAnswers {background-color: #f0dfcc;}
+#triviaAnswer {background-color: #f0dfcc;}
+
+
+
+
+/* Movie card styling */
+.movie-card {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    text-align: left;
+}
+
+.movie-card:hover {
+    transform: scale(1.02);
+}
+
+/* Chatbot box inside the container */
+.chatbot-box {
+    position: fixed;
+    top: 100px;
+    right: 40px;
+    width: 300px;
+    height: 400px;
+    z-index: 1000;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  }
+
+/*Inside chat box*/
+.chatbot-inner {
+    padding: 10px;
+    font-family: Montserrat, sans-serif;
+ }
+  
+#chat-messages {
+    height: 250px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+  
+.chatbot-inner input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+}
