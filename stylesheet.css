@@ -6,13 +6,13 @@ body {
 p {font-size: 16px;}
 .margin {margin-bottom: 45px;}
 .bg-1 { 
-    background-image: url('https://w.wallhaven.cc/full/42/wallhaven-42roy9.jpg');
-    background-size: cover;
-    background-position: center;
+    background-color: #a56f29;
     color: #f0dfcc;
 }
 .bg-2 { 
-    background-color: #a56f29;
+    background-image: url('https://w.wallhaven.cc/full/42/wallhaven-42roy9.jpg');
+    background-size: cover;
+    background-position: center;
     color: #f0dfcc;
 }
 .bg-3 { 
