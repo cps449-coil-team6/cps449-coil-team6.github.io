@@ -56,9 +56,6 @@ p {font-size: 16px;}
 #triviaAnswers {background-color: #f0dfcc;}
 #triviaAnswer {background-color: #f0dfcc;}
 
-
-
-
 /* Movie card styling */
 .movie-card {
     background: #fff;
@@ -85,37 +82,37 @@ p {font-size: 16px;}
 .movie-card:hover {
     transform: scale(1.02);
 }
-
-/* Chatbot box inside the container */
-.chatbot-box {
+ 
+.movie-input-box {
     position: fixed;
-    top: 100px;
-    right: 40px;
-    width: 300px;
-    height: 400px;
-    z-index: 1000;
+    padding: 10px;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 0 12px rgba(0,0,0,0.1);
-  }
-
-/*Inside chat box*/
-.chatbot-inner {
-    padding: 10px;
-    font-family: Montserrat, sans-serif;
- }
-  
-#chat-messages {
-    height: 250px;
-    overflow-y: auto;
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
 }
-  
-.chatbot-inner input[type="text"] {
+.movie-input-box input {
     width: 100%;
     padding: 5px;
-    box-sizing: border-box;
+    margin-bottom: 10px;
     font-family: Montserrat, sans-serif;
 }
+
+.autocomplete-suggestions {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    width: 300px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.autocomplete-suggestions div {
+padding: 8px;
+cursor: pointer;
+}
+
+.autocomplete-suggestions div:hover {
+background-color: #f0f0f0;
+}
+  

@@ -13,6 +13,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.model_selection import cross_val_score, KFold
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
+from fastapi.middleware.cors import CORSMiddleware
 
 # === Load and Merge Datasets ===
 movies = pd.read_csv("tmdb_5000_movies.csv")
@@ -127,10 +128,16 @@ print("Mean cross-validation score:", np.mean(scores))
 model.fit(X, y)
 
 # === FastAPI Setup ===
+app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"], 
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 new = pickle.load(open("movie_list.pkl", "rb"))
 similarity = pickle.load(open("similarity.pkl", "rb"))
-
-app = FastAPI()
 
 @app.get("/")
 def read_root():
@@ -151,4 +158,4 @@ def popular():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="127.0.0.1", port=5000)
+    uvicorn.run(app, host="0.0.0.0", port=5000)

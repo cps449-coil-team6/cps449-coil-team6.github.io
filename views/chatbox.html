@@ -4,8 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> CPS 449: Team 6's Chat Bot</title>
-        <script src="https://udayton-cloud.bitbucket.io/clock.js"></script>
+        <title> CPS 449: Team 6's Movies Recommendation</title>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"
                 integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
                 crossorigin="anonymous"></script>
@@ -43,136 +42,17 @@
             <div class="row">
                 <div class="col-sm-9 text-left">
                     <div class="row">
-                      <!-- Movie 1 -->
-                      <div class="col-sm-6 col-md-4">
-                        <div class="movie-card">
-                          <h4>Example</h4>
-                          <p>example text</p>
-                        </div>
-                      </div>
-              
-                      <!-- Movie 2 -->
-                      <div class="col-sm-6 col-md-4">
-                        <div class="movie-card">
-                            <h4>Example</h4>
-                            <p>example text</p>
-                        </div>
-                      </div>
-              
-                      <!-- Movie 3 -->
-                      <div class="col-sm-6 col-md-4">
-                        <div class="movie-card">
-                            <h4>Example</h4>
-                            <p>example text</p>
-                        </div>
-                      </div>
-
-                      <div class="col-sm-6 col-md-4">
-                        <div class="movie-card">
-                            <h4>Example</h4>
-                            <p>example text</p>
-                        </div>
-                      </div>
-
-                      <div class="col-sm-6 col-md-4">
-                        <div class="movie-card">
-                            <h4>Example</h4>
-                            <p>example text</p>
-                        </div>
-                      </div>
-
-                      <div class="col-sm-6 col-md-4">
-                        <div class="movie-card">
-                            <h4>Example</h4>
-                            <p>example text</p>
-                        </div>
-                      </div>
-
-                      <div class="col-sm-6 col-md-4">
-                        <div class="movie-card">
-                            <h4>Example</h4>
-                            <p>example text</p>
-                        </div>
-                      </div>
-
-                      <div class="col-sm-6 col-md-4">
-                        <div class="movie-card">
-                            <h4>Example</h4>
-                            <p>example text</p>
-                        </div>
-                      </div>
-
-                      <div class="col-sm-6 col-md-4">
-                        <div class="movie-card">
-                            <h4>Example</h4>
-                            <p>example text</p>
-                        </div>
-                      </div>
-
-                      <div class="col-sm-6 col-md-4">
-                        <div class="movie-card">
-                            <h4>Example</h4>
-                            <p>example text</p>
-                        </div>
-                      </div>
-
-                      <div class="col-sm-6 col-md-4">
-                        <div class="movie-card">
-                            <h4>Example</h4>
-                            <p>example text</p>
-                        </div>
-                      </div>
-
-                      <div class="col-sm-6 col-md-4">
-                        <div class="movie-card">
-                            <h4>Example</h4>
-                            <p>example text</p>
-                        </div>
-                      </div>
-
-                      <div class="col-sm-6 col-md-4">
-                        <div class="movie-card">
-                            <h4>Example</h4>
-                            <p>example text</p>
-                        </div>
-                      </div>
-
-                      <div class="col-sm-6 col-md-4">
-                        <div class="movie-card">
-                            <h4>Example</h4>
-                            <p>example text</p>
-                        </div>
-                      </div>
-
-                      <div class="col-sm-6 col-md-4">
-                        <div class="movie-card">
-                            <h4>Example</h4>
-                            <p>example text</p>
-                        </div>
-                      </div>
-
-                      <div class="col-sm-6 col-md-4">
-                        <div class="movie-card">
-                            <h4>Example</h4>
-                            <p>example text</p>
-                        </div>
-                      </div>
-                      
+                      <div id="recommendations" class="bg-3 text-left" style="margin-top: 20px;"></div>                                                 
                     </div>
                 </div> 
                 
                 <div class="col-sm-3">
-                    <div class="chatbot-box">
-                      <div class="chatbot-inner">
-                        <h4>Ask me to adjust recommendations</h4>
-                        <div id="chat-messages">
-                          <!-- messages go here -->
-                        </div>
-                        <input type="text" placeholder="Type here..." />
-                      </div>
-                      
-                    </div>
-                </div>
+                  <div class="movie-input-box">
+                      <h4>Find Movie Recommendations</h4>
+                      <input type="text" id="movie-input" placeholder="Enter a movie title..." oninput="getRecommendations()"/>
+                      <div id="suggestions" class="autocomplete-suggestions"></div>
+                  </div>
+              </div>
  
             </div>  
         </div>
@@ -180,5 +60,6 @@
         <!-- Footer -->
         <footer class="container-fluid bg-4 text-center">
         </footer>
+        <script src="/main.js"></script>
     </body>
 </html>
