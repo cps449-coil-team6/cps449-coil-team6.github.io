@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> CPS 449: Team 6's Movies Recommendation</title>
+        <title> CPS 449: Team 6's Popular Movie Recommendations</title>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"
                 integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
                 crossorigin="anonymous"></script>
@@ -41,21 +41,9 @@
             <div class="row">
                 <div class="col-sm-9 text-left">
                     <div class="row">
-                      <div id="loading-spinner">
-                        <div class="spinner"></div>
-                      </div>
-                      <div id="recommendations" class="bg-3 text-left" style="margin-top: 20px;"></div>                                                
+                      <div id="recommendations" class="bg-3 text-left" style="margin-top: 20px;"></div>                                                 
                     </div>
-                </div> 
-                
-                <div class="col-sm-3">
-                  <div class="movie-input-box">
-                      <h4>Find Movie Recommendations</h4>
-                      <input type="text" id="movie-input" placeholder="Enter a movie title..." oninput="getRecommendations()"/>
-                      <div id="suggestions" class="autocomplete-suggestions"></div>
-                  </div>
-              </div>
- 
+                </div>  
             </div>  
         </div>
 
