@@ -115,4 +115,148 @@ cursor: pointer;
 .autocomplete-suggestions div:hover {
 background-color: #f0f0f0;
 }
+/* Highlight first autocomplete suggestion */
+.autocomplete-suggestions div:first-child {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
   
+#loading-spinner {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.spinner {
+border: 6px solid #f3f3f3;
+border-top: 6px solid #3498db;
+border-radius: 50%;
+width: 50px;
+height: 50px;
+animation: spin 1s linear infinite;
+display: inline-block;
+}
+
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.cast-scroll {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px 0;
+    scrollbar-color: #a56f29 #f0dfcc;
+    scrollbar-width: thin;
+}
+
+.cast-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.cast-scroll::-webkit-scrollbar-thumb {
+    background-color: #a56f29;
+    border-radius: 4px;
+}
+
+.cast-card {
+    display: inline-block;
+    width: auto;
+    min-width: 150px;
+    max-width: 200px;
+    margin-right: 12px;
+    vertical-align: top;
+    text-align: center;
+    white-space: normal;
+}
+
+.cast-card img {
+    width: 100%;
+    height: 225px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cast-card h5 {
+    margin-top: 10px;
+    font-size: 14px;
+    word-wrap: break-word;
+}
+
+.cast-card p {
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+/* Container that holds both the poster and the video */
+#poster-container {
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* The poster image (clickable) */
+#movie-poster {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    display: block;
+}
+
+/* Video iframe container (initially hidden) */
+#video-container {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* The embedded YouTube iframe itself */
+#video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+#video-container {
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+#video-container.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Dim poster on hover */
+#poster-container:hover #movie-poster {
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+
+/* Optional play icon overlay when hovered */
+#poster-container::after {
+    content: "▶";
+    font-size: 60px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    font-family: Arial, sans-serif;
+}
+
+#poster-container:hover::after {
+    opacity: 0.8;
+}
