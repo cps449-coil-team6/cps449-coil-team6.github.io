@@ -75,14 +75,7 @@ p {font-size: 16px;}
     text-align: center; 
     align-items: center;
     justify-content: space-between;
-    height: 35vh;
-}
-
-@media (max-width: 576px) {
-    .picture-card {
-        height: auto; /* let it be flexible on small screens */
-        min-height: 350px; /* optional: set a reasonable minimum */
-    }
+    height: clamp(450px, 700px);
 }
 
 .movie-card:hover {
