@@ -162,7 +162,7 @@ function getRecommendations(isFromSelect = false) {
                                     fullHtml += `
                                         <div class="col-sm-6 col-md-4">
                                             <div class="picture-card">
-                                                <img src="${posterUrl}" alt="${movie.title}" style="width:100%; height:auto; border-radius:8px;">
+                                                <img src="${posterUrl}" alt="${movie.title}" style="width:100%; height:100%; border-radius:8px;">
                                                 <h4>${movie.title}</h4>
                                                 <p>⭐ Rating: ${voteAverage}</p>
                                                 <a href="/views/movie.html?id=${result.id}" class="btn btn-info" style="margin-top:10px;">More Info</a>
