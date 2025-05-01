@@ -75,7 +75,6 @@ p {font-size: 16px;}
     text-align: center; 
     align-items: center;
     justify-content: space-between;
-    height: clamp(450px, 700px);
 }
 
 .movie-card:hover {
