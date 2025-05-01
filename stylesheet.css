@@ -52,15 +52,12 @@ p {font-size: 16px;}
     cursor: pointer;
 }
 .round {border-radius: 8px;}
-#trivia {background-color: #f0dfcc;}
-#triviaAnswers {background-color: #f0dfcc;}
-#triviaAnswer {background-color: #f0dfcc;}
 
 /* Movie card styling */
 .movie-card {
     background: #fff;
     padding: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
@@ -76,7 +73,16 @@ p {font-size: 16px;}
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
     text-align: center; 
-    align-items: center; 
+    align-items: center;
+    justify-content: space-between;
+    height: 450px;
+}
+
+@media (max-width: 576px) {
+    .picture-card {
+        height: auto; /* let it be flexible on small screens */
+        min-height: 350px; /* optional: set a reasonable minimum */
+    }
 }
 
 .movie-card:hover {
