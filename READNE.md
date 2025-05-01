@@ -113,7 +113,7 @@ We chose:
 
 # Contributions
 
-- Thien Tran: Page main functions & Stylesheet & Movie details page
+- Thien Tran: Page main functions & Stylesheet & Movie details page & DevOps
 - Erich Jaster: DevOps & Team Page & Stylesheet
 - Tien Trinh & Phu Tran: ML Data mine model
 
