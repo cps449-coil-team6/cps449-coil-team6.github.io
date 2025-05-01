@@ -75,7 +75,7 @@ p {font-size: 16px;}
     text-align: center; 
     align-items: center;
     justify-content: space-between;
-    height: 450px;
+    height: 35vh;
 }
 
 @media (max-width: 576px) {
